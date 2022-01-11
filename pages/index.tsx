@@ -57,7 +57,6 @@ const Home: NextPage = () => {
               "name": "light",
               "default": {
                 "value": true,
-                "mode": "light"
               },
               "options": {
                 "background": {
@@ -74,7 +73,6 @@ const Home: NextPage = () => {
               "name": "dark",
               "default": {
                 "value": true,
-                "mode": "dark"
               },
               "options": {
                 "background": {
