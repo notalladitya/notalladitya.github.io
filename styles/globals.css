@@ -17,3 +17,6 @@ a {
 * {
   box-sizing: border-box;
 }
+.box {
+  margin: 10px 0;
+}

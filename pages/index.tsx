@@ -1,110 +1,44 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Particles from 'react-tsparticles'
+import {gsap} from 'gsap';
+import React, {useEffect, useRef} from "react";
 
-const Home: NextPage = () => {
-  return (
-    <>
-      <Particles
-        id="tsparticles"
-        options={{
-          "fpsLimit": 60,
-          "fullScreen": {
-            "enable": true,
-          },
-          "particles": {
-            "number": {
-              "value": 50,
-            },
-            "shape": {
-              "type": "circle",
-            },
-            "opacity": {
-              "value": 0.5
-            },
-            "size": {
-              "value": 400,
-              "random": {
-                "enable": true,
-                "minimumValue": 200
-              }
-            },
-            "move": {
-              "enable": true,
-              "speed": 10,
-              "direction": "top",
-              "outModes": {
-                "default": "out",
-                "top": "destroy",
-                "bottom": "none"
-              }
-            }
-          },
-          "interactivity": {
-            "detectsOn": "canvas",
-            "events": {
-              "resize": true,
-            }
-          },
-          "style": {
-            "filter": "blur(50px)"
-          },
-          "detectRetina": true,
-          "themes": [
-            {
-              "name": "light",
-              "default": {
-                "value": true,
-              },
-              "options": {
-                "background": {
-                  "color": "#f7f8ef"
-                },
-                "particles": {
-                  "color": {
-                    "value": ["#5bc0eb", "#fde74c", "#9bc53d", "#e55934", "#fa7921"]
-                  }
-                }
-              }
-            },
-            {
-              "name": "dark",
-              "default": {
-                "value": true,
-              },
-              "options": {
-                "background": {
-                  "color": "#080710"
-                },
-                "particles": {
-                  "color": {
-                    "value": ["#004f74", "#5f5800", "#245100", "#7d0000", "#810c00"]
-                  }
-                }
-              }
-            }
-          ],
-          "emitters": {
-            "direction": "top",
-            "position": {
-              "x": 50,
-              "y": 150
-            },
-            "rate": {
-              "delay": 0.2,
-              "quantity": 2
-            },
-            "size": {
-              "width": 100,
-              "height": 0
-            }
-          }
-        }}
-      />
-    </>
-  )
+function Box({children}: { children: React.ReactNode }) {
+    return <div className="box">{children}</div>;
 }
 
-export default Home
+function Container() {
+    return <div><Box>Nested Box</Box></div>;
+}
+
+export default function Home() {
+    const boxRef = useRef<HTMLButtonElement>(null)
+    const el = useRef<HTMLDivElement>(null);
+    const q = gsap.utils.selector(el);
+
+    function enterMouse({currentTarget}: React.MouseEvent) {
+        gsap.to(currentTarget, {scale: 1.2, duration: 0.3})
+    }
+
+    function leaveMouse({currentTarget}: React.MouseEvent) {
+        gsap.to(currentTarget, {scale: 1, duration: 0.3})
+    }
+
+    useEffect(() => {
+        gsap.to(q(".box"), {
+            x: 100,
+            stagger: 0.33,
+            repeat: -1,
+            repeatDelay: 1,
+            yoyo: true
+        });
+        // gsap.to(q(".box"), { x: 100 });
+        // gsap.to(boxRef.current, {duration: 2, rotation: "+=360"})
+    }, [])
+    return (
+        <>
+            <button className="text-3xl border-2 bg-emerald-300 rounded-3xl" ref={boxRef} onMouseEnter={enterMouse}
+                    onMouseLeave={leaveMouse}>Hover Me
+            </button>
+        </>
+    )
+}
+
