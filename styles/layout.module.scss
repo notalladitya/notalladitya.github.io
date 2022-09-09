@@ -1,0 +1,18 @@
+.footerAnimate {
+  animation: showUp 1.5s ease-in-out forwards;
+}
+
+@keyframes showUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

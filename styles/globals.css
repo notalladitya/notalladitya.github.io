@@ -14,9 +14,29 @@ a {
   text-decoration: none;
 }
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
-.box {
-  margin: 10px 0;
+body {
+  background: hsl(216, 17.2%, 88.6%);
 }
+
+/* TODO: Change name of CSS Property and scope it to layout component only */
+.newMorph:hover {
+  /* Add Animation */
+  transition: 0.3s;
+  border-radius: 10px;
+  box-shadow: -10px -10px 20px #b3b6bb, 10px 10px 20px #ffffff;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: hsl(120, 1.9%, 13.4%);
+  }
+} */
