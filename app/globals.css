@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: 255 255 255; /* White */
+  --foreground: 23 23 23; /* Neutral 900 */
+
+  --primary: 99 102 241; /* Indigo 500 */
+  --primary-foreground: 255 255 255;
+
+  --secondary: 16 185 129; /* Emerald 500 - Playful green */
+  --secondary-foreground: 255 255 255;
+
+  --accent: 236 72 153; /* Pink 500 - Bright accent */
+  --accent-foreground: 255 255 255;
+
+  --muted: 243 244 246; /* Gray 100 */
+  --muted-foreground: 107 114 128; /* Gray 500 */
+
+  --font-sans: "Outfit", sans-serif;
+  --font-display: "Clash Display", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 10 10 10;
+    --foreground: 250 250 250;
+    
+    --primary: 129 140 248; /* Indigo 400 */
+    --primary-foreground: 0 0 0;
+    
+    --secondary: 52 211 153; /* Emerald 400 */
+    --secondary-foreground: 0 0 0;
+
+    --accent: 244 114 182; /* Pink 400 */
+    --accent-foreground: 0 0 0;
+    
+    --muted: 38 38 38;
+    --muted-foreground: 163 163 163;
+  }
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  font-family: var(--font-sans);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
