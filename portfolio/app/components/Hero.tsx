@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import Image from "next/image";
-import { ArrowDown, MapPin, Briefcase } from "lucide-react";
+import { ArrowDown, MapPin, Briefcase, FileDown } from "lucide-react";
 
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -130,6 +130,16 @@ export default function Hero() {
                   <ArrowDown className="w-4 h-4 rotate-[-45deg] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-[var(--accent-primary-light)] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              </motion.a>
+              <motion.a
+                href="/resume.pdf"
+                download="Aditya-Sharma-Resume.pdf"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="group px-6 py-3 bg-[var(--accent-secondary)]/10 border border-[var(--accent-secondary)]/30 text-[var(--accent-secondary)] font-medium rounded-lg hover:bg-[var(--accent-secondary)]/20 hover:border-[var(--accent-secondary)] transition-all flex items-center gap-2"
+              >
+                <FileDown className="w-4 h-4" />
+                Resume
               </motion.a>
               <motion.a
                 href="#contact"

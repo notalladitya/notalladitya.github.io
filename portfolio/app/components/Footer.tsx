@@ -13,6 +13,7 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
+  { label: "Resume", href: "/resume.pdf", isExternal: true },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -42,6 +43,7 @@ export default function Footer() {
               <a
                 key={link.label}
                 href={link.href}
+                {...(link.isExternal ? { download: true } : {})}
                 className="text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
               >
                 {link.label}
