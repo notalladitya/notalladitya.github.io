@@ -42,7 +42,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg pt-20 md:pt-0">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
