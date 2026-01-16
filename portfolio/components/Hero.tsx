@@ -34,7 +34,7 @@ export const Hero = () => {
           transition={{ delay: 0.4 }}
           className="flex flex-wrap gap-4"
         >
-          <a href="/Aditya-Sharma-Resume.pdf" download="Aditya-Sharma-Resume.pdf" className="neo-brutal-button flex items-center gap-2">
+          <a href="/Aditya-Sharma-Resume.pdf" target="_blank" rel="noopener noreferrer" className="neo-brutal-button flex items-center gap-2">
             <FileText size={20} /> Resume
           </a>
           <a href="#contact" className="px-6 py-2 border-2 border-white font-bold uppercase hover:bg-white hover:text-black transition-all flex items-center gap-2 shadow-[4px_4px_0px_0px_#27272a] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">
