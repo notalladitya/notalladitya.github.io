@@ -20,7 +20,7 @@ export const Contact = () => {
 
         <a
           href="mailto:aditya.sharma.11072001@gmail.com"
-          className="text-2xl md:text-4xl font-bold text-white hover:text-primary transition-colors border-b-4 border-primary pb-2 mb-12 inline-block"
+          className="text-lg md:text-4xl font-bold text-white hover:text-primary transition-colors border-b-4 border-primary pb-2 mb-12 inline-block break-all"
         >
           aditya.sharma.11072001@gmail.com
         </a>
