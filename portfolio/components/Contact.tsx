@@ -27,7 +27,7 @@ export const Contact = () => {
 
         <div className="flex gap-8 justify-center mt-8">
           <SocialLink href="https://www.linkedin.com/in/aditya-5harma" icon={<Linkedin size={32} />} label="LinkedIn" />
-          <SocialLink href="https://github.com/dtr-beast" icon={<Github size={32} />} label="GitHub" />
+          <SocialLink href="https://github.com/notalladitya" icon={<Github size={32} />} label="GitHub" />
           <SocialLink href="tel:9389263175" icon={<Phone size={32} />} label="Phone" />
         </div>
       </motion.div>

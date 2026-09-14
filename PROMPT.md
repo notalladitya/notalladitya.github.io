@@ -31,4 +31,4 @@ Use the following files for information and guidance:
 
 
 ## Extra Information
-1. Github: dtr-beast
+1. Github: notalladitya

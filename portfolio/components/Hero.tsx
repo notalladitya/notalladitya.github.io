@@ -43,7 +43,7 @@ export const Hero = () => {
         </motion.div>
 
         <div className="flex gap-6 pt-4 text-gray-400">
-          <a href="https://github.com/dtr-beast" target="_blank" className="hover:text-primary transition-colors"><Github size={24} /></a>
+          <a href="https://github.com/notalladitya" target="_blank" className="hover:text-primary transition-colors"><Github size={24} /></a>
           <a href="https://www.linkedin.com/in/aditya-5harma" target="_blank" className="hover:text-primary transition-colors"><Linkedin size={24} /></a>
           <a href="mailto:aditya.sharma.11072001@gmail.com" className="hover:text-primary transition-colors"><Mail size={24} /></a>
         </div>
